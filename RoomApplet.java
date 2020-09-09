@@ -10,9 +10,18 @@ public class RoomApplet extends Applet implements ActionListener {
     private static final long serialVersionUID = 1L;
 
     protected int layout;
+    protected Label barrier;
 
     public void init() {
         setFont(new Font("Dialog", Font.BOLD, 18));
+
+        instructions = new Button("Instructions");
+        add(instructions);
+        instructions.addActionListener(this);
+
+        barrier = new Label("|", Label.CENTER);
+        barrier.setBackground(Color.white);
+        add(barrier);
 
         layout1 = new Button("Layout 1");
         add(layout1);
@@ -40,21 +49,21 @@ public class RoomApplet extends Applet implements ActionListener {
             g.fillRect(50, 50, 700, 100);
         } else if (layout == 1) {
             g.setColor(Color.green);
-            g.fillRect(50, 50, 700, 100);
+            g.fillRect(50, 50, 400, 300);
         } else if (layout == 2) {
             g.setColor(Color.red);
-            g.fillRect(50, 50, 700, 100);
+            g.fillRect(50, 50, 500, 800);
         } else if (layout == 3) {
             g.setColor(Color.blue);
-            g.fillRect(50, 50, 700, 100);
+            g.fillRect(50, 50, 300, 200);
         } else {
             g.setColor(Color.black);
-            g.fillRect(50, 50, 700, 100);
+            g.fillRect(50, 50, 90, 200);
         }
 
     }
 
-    Button layout1, layout2, layout3, layout4;
+    Button layout1, layout2, layout3, layout4, instructions;
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == layout1) {
@@ -75,6 +84,11 @@ public class RoomApplet extends Applet implements ActionListener {
         if (e.getSource() == layout4) {
             System.out.println("Layout 4 chosen");
             layout = 4;
+            repaint();
+        }
+        if (e.getSource() == instructions) {
+            System.out.println("Instructions chosen");
+            layout = 0;
             repaint();
         }
     }
