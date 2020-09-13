@@ -14,7 +14,7 @@ public class Room extends Applet {
     }
 
     public void RoomPaint(Graphics g) {
-        g.setColor(Color.black);
-        g.fillRect(100, 100, width, length);
+        g.setColor(Color.green);
+        g.fillRect(150, 150, width, length);
     }
 }

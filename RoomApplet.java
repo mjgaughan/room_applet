@@ -44,38 +44,29 @@ public class RoomApplet extends Applet implements ActionListener {
     }
 
     public void paint(Graphics g) {
-        if (layout == 0) {
-            g.setColor(Color.orange);
-            g.fillRect(50, 50, 700, 100);
-            Room dorm = new Room();
-            dorm.init(10, 20, 4);
-            dorm.RoomPaint(g);
-        } else if (layout == 1) {
-            g.setColor(Color.green);
-            g.fillRect(50, 50, 400, 300);
+        g.setColor(Color.red);
+        g.fillRect(50, 50, 800, 800);
+        if (layout == 1) {
             Room dorm = new Room();
             dorm.init(10, 30, 4);
             dorm.RoomPaint(g);
         } else if (layout == 2) {
-            g.setColor(Color.red);
-            g.fillRect(50, 50, 500, 800);
             Room dorm = new Room();
             dorm.init(10, 40, 4);
             dorm.RoomPaint(g);
         } else if (layout == 3) {
-            g.setColor(Color.blue);
-            g.fillRect(50, 50, 300, 200);
             Room dorm = new Room();
             dorm.init(10, 60, 4);
+            dorm.RoomPaint(g);
+        } else if (layout == 4) {
+            Room dorm = new Room();
+            dorm.init(10, 80, 4);
             dorm.RoomPaint(g);
         } else {
             g.setColor(Color.black);
-            g.fillRect(50, 50, 90, 200);
-            Room dorm = new Room();
-            dorm.init(10, 60, 4);
-            dorm.RoomPaint(g);
+            g.fillRect(150, 150, 600, 600);
+            // Instructions go here
         }
-
     }
 
     Button layout1, layout2, layout3, layout4, instructions;
