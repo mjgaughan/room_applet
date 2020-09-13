@@ -47,18 +47,33 @@ public class RoomApplet extends Applet implements ActionListener {
         if (layout == 0) {
             g.setColor(Color.orange);
             g.fillRect(50, 50, 700, 100);
+            Room dorm = new Room();
+            dorm.init(10, 20, 4);
+            dorm.RoomPaint(g);
         } else if (layout == 1) {
             g.setColor(Color.green);
             g.fillRect(50, 50, 400, 300);
+            Room dorm = new Room();
+            dorm.init(10, 30, 4);
+            dorm.RoomPaint(g);
         } else if (layout == 2) {
             g.setColor(Color.red);
             g.fillRect(50, 50, 500, 800);
+            Room dorm = new Room();
+            dorm.init(10, 40, 4);
+            dorm.RoomPaint(g);
         } else if (layout == 3) {
             g.setColor(Color.blue);
             g.fillRect(50, 50, 300, 200);
+            Room dorm = new Room();
+            dorm.init(10, 60, 4);
+            dorm.RoomPaint(g);
         } else {
             g.setColor(Color.black);
             g.fillRect(50, 50, 90, 200);
+            Room dorm = new Room();
+            dorm.init(10, 60, 4);
+            dorm.RoomPaint(g);
         }
 
     }
@@ -70,6 +85,7 @@ public class RoomApplet extends Applet implements ActionListener {
             System.out.println("Layout 1 chosen");
             layout = 1;
             repaint();
+            // dorm.RoomPaint(g);
         }
         if (e.getSource() == layout2) {
             System.out.println("Layout 2 chosen");
