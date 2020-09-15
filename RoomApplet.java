@@ -47,20 +47,24 @@ public class RoomApplet extends Applet implements ActionListener {
         g.setColor(Color.red);
         g.fillRect(50, 50, 800, 800);
         if (layout == 1) {
+            // Battell Double
             Room dorm = new Room();
-            dorm.init(10, 30, 4);
+            dorm.init(640, 900, 4);
             dorm.RoomPaint(g);
         } else if (layout == 2) {
+            // Forrest Single
             Room dorm = new Room();
-            dorm.init(10, 40, 4);
+            dorm.init(666, 600, 4);
             dorm.RoomPaint(g);
         } else if (layout == 3) {
             Room dorm = new Room();
-            dorm.init(10, 60, 4);
+            // Kelly Single
+            dorm.init(10, 600, 8);
             dorm.RoomPaint(g);
         } else if (layout == 4) {
+            // Painter 2-Room Double
             Room dorm = new Room();
-            dorm.init(10, 80, 4);
+            dorm.init(10, 80, 6);
             dorm.RoomPaint(g);
         } else {
             g.setColor(Color.black);

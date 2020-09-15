@@ -15,6 +15,18 @@ public class Room extends Applet {
 
     public void RoomPaint(Graphics g) {
         g.setColor(Color.green);
-        g.fillRect(150, 150, width, length);
+        if (number_of_sides == 4)
+            g.fillRect(75, 75, width, length);
+        else {
+            if (number_of_sides == 6) {
+                g.fillRect(75, 75, 400, 600);
+                g.fillRect(480, 75, 300, 500);
+                System.out.println("6");
+            } else if (number_of_sides == 8) {
+                g.fillRect(75, 75, 400, 600);
+                g.fillRect(475, 75, 120, 350);
+                System.out.println("8");
+            }
+        }
     }
 }
